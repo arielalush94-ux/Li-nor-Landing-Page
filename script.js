@@ -103,13 +103,13 @@ function initScrollAnimate() {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100);
+                }, index * 80); // Slightly faster stagger
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px 50px 0px' // Start loading slightly before it enters the view
     });
 
     elements.forEach(el => observer.observe(el));
