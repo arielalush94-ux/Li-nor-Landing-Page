@@ -2709,3 +2709,13 @@ h3.section-title {
     margin: 10px auto 0;
     border-radius: 50px;
 }
+/* Mobile Only Utilities */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
