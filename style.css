@@ -2719,3 +2719,34 @@ h3.section-title {
         display: block;
     }
 }
+
+
+@media (max-width: 768px) {
+    .course-card-clickable .section-title {
+        font-size: 1.55rem !important;
+        white-space: nowrap;
+        letter-spacing: -0.5px;
+    }
+    .course-card-clickable {
+        padding: 40px 25px;
+    }
+    .card-emphasis-row {
+        flex-wrap: nowrap !important;
+        gap: 8px;
+        justify-content: center;
+    }
+    .emphasis-item {
+        font-size: 0.95rem;
+    }
+    .emphasis-dot {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .course-card-clickable .section-title {
+        font-size: 1.35rem !important;
+    }
+    .emphasis-item {
+        font-size: 0.85rem;
+    }
+}
