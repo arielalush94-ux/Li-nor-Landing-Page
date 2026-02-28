@@ -2750,3 +2750,44 @@ h3.section-title {
         font-size: 0.85rem;
     }
 }
+
+
+/* Hero Benefits - cards on dark background */
+.hero-benefits {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+.hero-benefits .benefit-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+}
+.hero-benefits .benefit-card h3 {
+    color: var(--gold-light);
+}
+.hero-benefits .benefit-card p {
+    color: rgba(255,255,255,0.8);
+}
+.hero-benefits .benefit-card:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: var(--gold-light);
+}
+@media (max-width: 768px) {
+    .hero-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .hero-benefits .benefit-card {
+        padding: 20px 14px;
+    }
+    .hero-benefits .benefit-icon {
+        font-size: 1.8rem;
+    }
+    .hero-benefits .benefit-card h3 {
+        font-size: 0.95rem;
+    }
+    .hero-benefits .benefit-card p {
+        font-size: 0.8rem;
+    }
+}
