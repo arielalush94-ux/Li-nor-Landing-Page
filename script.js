@@ -101,15 +101,24 @@ function initScrollAnimate() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
+                // Trigger animation
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 80); // Slightly faster stagger
+
+                    // NEW: If this is a gallery item with a video, try to play it
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.muted = true; // Hard requirement for mobile autoplay
+                        video.play().catch(e => console.warn('Gallery video autoplay blocked:', e));
+                    }
+                }, index * 80);
+
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.05,
-        rootMargin: '0px 0px 50px 0px' // Start loading slightly before it enters the view
+        rootMargin: '0px 0px 100px 0px' // Start loading even earlier
     });
 
     elements.forEach(el => observer.observe(el));
