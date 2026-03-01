@@ -2495,6 +2495,16 @@ body {
     margin: 10px auto 40px;
 }
 
+.course-intro-section .stat-number {
+    color: var(--gold-dark) !important;
+    text-shadow: none;
+}
+
+.course-intro-section .stat-label {
+    color: var(--text-main) !important;
+    font-weight: 600;
+}
+
 .course-intro-section p {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -2709,6 +2719,7 @@ h3.section-title {
     margin: 10px auto 0;
     border-radius: 50px;
 }
+
 /* Mobile Only Utilities */
 .mobile-only {
     display: none;
@@ -2727,25 +2738,31 @@ h3.section-title {
         white-space: nowrap;
         letter-spacing: -0.5px;
     }
+
     .course-card-clickable {
         padding: 40px 25px;
     }
+
     .card-emphasis-row {
         flex-wrap: nowrap !important;
         gap: 8px;
         justify-content: center;
     }
+
     .emphasis-item {
         font-size: 0.95rem;
     }
+
     .emphasis-dot {
         font-size: 1rem;
     }
 }
+
 @media (max-width: 480px) {
     .course-card-clickable .section-title {
         font-size: 1.35rem !important;
     }
+
     .emphasis-item {
         font-size: 0.85rem;
     }
@@ -2757,36 +2774,45 @@ h3.section-title {
     max-width: 900px;
     margin: 40px auto 0;
 }
+
 .hero-benefits .benefit-card {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: #fff;
 }
+
 .hero-benefits .benefit-card h3 {
     color: var(--gold-light);
 }
+
 .hero-benefits .benefit-card p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
+
 .hero-benefits .benefit-card:hover {
-    background: rgba(255,255,255,0.14);
+    background: rgba(255, 255, 255, 0.14);
     border-color: var(--gold-light);
 }
+
 @media (max-width: 768px) {
     .hero-benefits {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
+
     .hero-benefits .benefit-card {
         padding: 20px 14px;
     }
+
     .hero-benefits .benefit-icon {
         font-size: 1.8rem;
     }
+
     .hero-benefits .benefit-card h3 {
         font-size: 0.95rem;
     }
+
     .hero-benefits .benefit-card p {
         font-size: 0.8rem;
     }
